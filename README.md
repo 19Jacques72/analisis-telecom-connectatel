@@ -1,20 +1,26 @@
 # Análisis de Comportamiento de Clientes - ConnectaTel 📱
 
-Este proyecto analiza los patrones de uso de servicios móviles en México y Colombia. El objetivo es identificar segmentos de clientes, detectar comportamientos atípicos y proponer estrategias comerciales basadas en datos.
+## 1. Objetivo del Proyecto
+Analizar los patrones de uso de servicios móviles (llamadas y mensajes) para identificar segmentos de valor, detectar comportamientos atípicos y proponer recomendaciones estratégicas para los planes Básico y Premium de ConnectaTel.
 
-## 📊 Resumen del Proyecto
-Se integraron tres fuentes de datos (planes, usuarios y actividad real) para construir un perfil estadístico completo. Se aplicaron técnicas de limpieza de datos, tratamiento de valores nulos, detección de outliers y segmentación demográfica.
+## 2. Datasets Utilizados
+*   **plans.csv**: Detalles de los beneficios y costos de los planes.
+*   **users_latam.csv**: Información demográfica y fechas de registro de los clientes.
+*   **usage.csv**: Registro de la actividad real (mensajes y duración de llamadas).
 
-## 🛠️ Herramientas Utilizadas
-*   **Python:** pandas, numpy.
-*   **Visualización:** seaborn, matplotlib.
-*   **Entorno:** Jupyter Notebook / Google Colab.
+## 3. Etapas del Análisis Realizadas
+1.  **Carga y exploración:** Inspección de datos y verificación de tipos.
+2.  **Limpieza de datos:** Corrección de sentinels (-999), estandarización de nulos y fechas.
+3.  **Estadística descriptiva:** Análisis de promedios y comportamiento por usuario.
+4.  **Detección de outliers:** Uso de Boxplots e IQR para identificar usuarios extremos.
+5.  **Segmentación:** Clasificación por niveles de uso y grupos de edad.
+6.  **Conclusiones:** Hallazgos principales y recomendaciones de negocio.
 
-## 🚀 Hallazgos Principales
-*   **Calidad de Datos:** Se corrigieron valores *sentinel* (-999 en edad) y se estandarizaron ciudades inconsistentes.
-*   **Segmentación:** Se identificaron tres grupos de uso (Bajo, Medio, Alto). La mayoría de los usuarios se encuentran en el segmento de bajo consumo.
-*   **Outliers:** Se detectaron "Heavy Users" con consumos extremos que representan oportunidades para planes de alta gama.
+## 4. Cómo Ejecutar el Notebook
+*   **En Google Colab:** Sube el archivo `.ipynb` a tu cuenta de Drive y ábrelo directamente.
+*   **En Local:** Instala Anaconda y abre el archivo desde Jupyter Notebook o VS Code.
 
-## 📈 Recomendaciones de Negocio
-*   **Plan Ultra:** Crear una oferta para el segmento de "Alto Uso".
-*   **Migración:** Incentivar a usuarios de "Uso Medio" a subir al plan Premium.
+## 5. Guía de Reproducción
+1. Descarga el repositorio completo desde GitHub.
+2. Asegúrate de que los archivos CSV estén en la ruta `/datasets/`.
+3. Ejecuta las celdas en orden secuencial.
